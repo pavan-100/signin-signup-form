@@ -1,0 +1,18 @@
+<section class="sigin-content">
+    <mat-card>
+
+        <div>
+            <h1>Signin to HRMS</h1>
+        </div>
+
+        <div>
+            <form #newUserForm="ngForm" (ngSubmit)="onSubmit(newUserForm)">
+                <input type="text" placeholder="Enter name" required maxlength="25" [(ngModel)]="profile.name"
+                    name="name" #profileName="ngModel" />
+                <div *ngIf="!profileName.valid && profileName.touched">
+                    User name is required!
+                </div>
+        </div>
+
+    </mat-card>
+</section>
