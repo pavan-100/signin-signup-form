@@ -1,0 +1,18 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="main-page">
+    <mat-card align="center">
+        <div class="img-cont">
+            <img src="../../../assets/df.jpg">
+        </div>
+        <h1>Forgot Password</h1>
+        <form #newUserForm="ngForm" (ngSubmit)="onSubmit(newUserForm)">
+
+
+            <div class="log-btn">
+                <button mat-button type="submit" [disabled]="!newUserForm.valid">
+                    Login
+                </button>
+            </div>
+
+        </form>
+    </mat-card>
+</div>

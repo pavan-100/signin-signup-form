@@ -6,13 +6,21 @@ import { SigninComponent } from "../../components/signin/signin.component";
 import { SignupComponent } from "../../components/signup/signup.component";
 import { Routes, RouterModule } from "@angular/router";
 import { WelcomePageComponent } from "./welcome-page.component";
+import { ForgotComponent } from "../../components/forgot/forgot.component";
 
 const routes: Routes = [
   { path: "", component: WelcomePageComponent },
-  { path: "signup", component: SignupComponent }
+  { path: "signin", component: SigninComponent },
+  { path: "signup", component: SignupComponent },
+  { path: "forgot", component: ForgotComponent }
 ];
 @NgModule({
-  declarations: [SigninComponent, SignupComponent, WelcomePageComponent],
+  declarations: [
+    SigninComponent,
+    ForgotComponent,
+    SignupComponent,
+    WelcomePageComponent
+  ],
   imports: [
     CommonModule,
     SharedModule,

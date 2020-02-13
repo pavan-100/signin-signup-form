@@ -1,0 +1,48 @@
+.main-page {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../../assets/OS-X-Wallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+.main-page h1 {
+  color: crimson;
+  margin: 20px;
+}
+mat-card {
+  width: 300px;
+  height: 500px;
+}
+.error {
+  color: red;
+  position: absolute;
+  top: 65px;
+  left: 40px;
+  font-size: small;
+}
+.img-cont img {
+  height: 70px;
+  width: 100px;
+  margin-top: 30px;
+  border-radius: 50px;
+}
+.log-btn3 button {
+  color: aqua;
+}
+.main-page h1 {
+  font-weight: 200;
+}
+.log-btn button:disabled {
+  margin-top: 20px;
+  color: black;
+  background-color: grey;
+  width: 220px;
+}
+.log-btn button {
+  margin-top: 20px;
+  color: black;
+  background-color: rgb(64, 224, 208);
+  width: 220px;
+}
