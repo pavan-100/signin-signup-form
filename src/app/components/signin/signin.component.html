@@ -33,10 +33,18 @@
                 <mat-checkbox>Reminder me</mat-checkbox>
                 <button mat-button routerLink="/signup">Signup</button>
             </div>
-            <div>
+            <div class="log-btn3">
                 <button mat-button routerLink="/forgot">Forgot Password</button>
             </div>
             <div class="log-btn">
+                <mat-form-field>
+                    <mat-label>Message</mat-label>
+                    <input matInput value="Disco party!" #message>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Action</mat-label>
+                    <input matInput value="Dance" #action>
+                </mat-form-field>
                 <button mat-button type="submit" [disabled]="!newUserForm.valid">
                     Login
                 </button>

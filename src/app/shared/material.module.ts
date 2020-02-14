@@ -27,7 +27,8 @@ import {
   MatSlideToggleModule,
   MatPaginatorModule,
   MatNativeDateModule,
-  MatDividerModule
+  MatDividerModule,
+  MatSnackBar
 } from "@angular/material";
 
 @NgModule({
@@ -37,6 +38,7 @@ import {
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
+    MatSnackBar,
     MatGridListModule,
     MatSidenavModule,
     MatSortModule,
@@ -63,6 +65,7 @@ import {
   exports: [
     MatButtonModule,
     MatMenuModule,
+    MatSnackBar,
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
