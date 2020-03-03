@@ -47,6 +47,14 @@
                 </button>
             </div>
             <div class="log-btn">
+                <mat-form-field>
+                    <mat-label>Message</mat-label>
+                    <input matInput value="Disco party!" #message>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Action</mat-label>
+                    <input matInput value="Dance" #action>
+                </mat-form-field>
                 <button mat-button type="submit" [disabled]="!newUserForm.valid">
                     Login
                 </button>
