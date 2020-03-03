@@ -33,8 +33,18 @@
                 <mat-checkbox>Reminder me</mat-checkbox>
                 <button mat-button routerLink="/signup">Signup</button>
             </div>
-            <div>
+            <div class="log-btn3">
                 <button mat-button routerLink="/forgot">Forgot Password</button>
+            </div>
+            <div class="sign-google">
+                <button mat-button type="submit" (click)="signinWithGoogle()">
+                    Signin with Google
+                </button>
+            </div>
+            <div class="sign-fb">
+                <button mat-button type="submit" (click)="signinWithFacebook()">
+                    Signin with Facebook
+                </button>
             </div>
             <div class="log-btn">
                 <button mat-button type="submit" [disabled]="!newUserForm.valid">

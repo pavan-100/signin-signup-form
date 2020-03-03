@@ -13,7 +13,7 @@
 }
 mat-card {
   width: 300px;
-  height: 500px;
+  max-height: 700px;
 }
 .error {
   color: red;
@@ -38,11 +38,23 @@ mat-card {
   margin-top: 20px;
   color: black;
   background-color: grey;
-  width: 220px;
+  width: 100%;
 }
 .log-btn button {
   margin-top: 20px;
   color: black;
   background-color: rgb(64, 224, 208);
-  width: 220px;
+  width: 100%;
+}
+.sign-google {
+  margin-top: 20px;
+  width: 100%;
+  background-color: rgb(146, 7, 7);
+  color: white;
+}
+.sign-fb {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #3b5998;
+  color: white;
 }
