@@ -1,0 +1,17 @@
+<div align="center">
+<h1>Employees</h1>
+
+  <table>
+
+    <ng-container *ngFor="let item of employee.data">
+      <tr>
+    <td>{{ item.id }}</td>
+    <td>{{ item.employee_name }}</td>
+    <td>{{ item.employee_salary }}</td>
+    <td>{{ item.employee_age }}</td>
+    <td><button (click)=" updateEmployee()">Edit</button></td>
+    <td><button (click)="deleteEmployee(id: any)">Delete</button></td>
+    </tr>
+</ng-container>
+</table>
+</div>

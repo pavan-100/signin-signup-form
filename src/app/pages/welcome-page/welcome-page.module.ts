@@ -3,59 +3,39 @@ import { CommonModule } from "@angular/common";
 import { SharedModule } from "../../shared/shared.module";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { SigninComponent } from "../../components/signin/signin.component";
+import {  HttpClientModule } from "@angular/common/http";
 
 import { Routes, RouterModule } from "@angular/router";
 import { WelcomePageComponent } from "./welcome-page.component";
-import { ForgotComponent } from "../../components/forgot/forgot.component";
+import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { EmployerDetailsComponent } from '../../components/employer-details/employer-details.component';
+import { EmployerDetailsService } from "../../components/employer-details/employer-details.service";
 
 
-import {
-  GoogleLoginProvider,
-  FacebookLoginProvider
-} from "angularx-social-login";
-import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
-
-let config = new AuthServiceConfig([
-  {
-    id: GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider("Google-OAuth-Client-Id")
-  },
-  {
-    id: FacebookLoginProvider.PROVIDER_ID,
-    provider: new FacebookLoginProvider("541295936497624")
-  }
-]);
-
-export function provideConfig() {
-  return config;
-}
 
 const routes: Routes = [
   { path: "", component: WelcomePageComponent },
   { path: "signin", component: SigninComponent },
- 
-  { path: "forgot", component: ForgotComponent }
+  { path: "navbar", component: NavbarComponent },
+  { path: "employer", component: EmployerDetailsComponent },
+
 ];
 @NgModule({
   declarations: [
     SigninComponent,
-    ForgotComponent,
- 
+    NavbarComponent,
+    EmployerDetailsComponent,
     WelcomePageComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
-    SocialLoginModule,
     FlexLayoutModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),HttpClientModule
   ],
   providers: [
-  
-    {
-      provide: AuthServiceConfig,
-      useFactory: provideConfig
-    }
+    EmployerDetailsService
+
   ]
 })
 export class WelcomePageModule {}

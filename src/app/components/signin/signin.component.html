@@ -1,43 +1,59 @@
 <div fxLayout="row" fxLayoutAlign="center center" class="main-page">
-    <mat-card align="center">
-        <div class="img-cont">
-            <img src="../../../assets/df.jpg">
+  <mat-card align="center">
+    <div class="img-cont">
+      <img src="../../../assets/df.jpg" />
+    </div>
+    <h1>Login Using Angular</h1>
+    <form #newUserForm="ngForm" (ngSubmit)="onSubmit(newUserForm)">
+      <div style="position: relative;">
+        <mat-form-field appearance="outline">
+          <mat-label>Enter Your Email</mat-label>
+          <input
+            matInput
+            placeholder="Email"
+            required
+            [(ngModel)]="sigin.email"
+            name="email"
+            #siginEmail="ngModel"
+          />
+          <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+        <div *ngIf="!siginEmail.valid && siginEmail.touched" class="error">
+          Email is required!
         </div>
-        <h1>Login Using Angular</h1>
-        <form #newUserForm="ngForm" (ngSubmit)="onSubmit(newUserForm)">
-            <div style="position: relative;">
-                <mat-form-field appearance="outline">
-                    <mat-label>Enter Your Email</mat-label>
-                    <input matInput placeholder="Email" required [(ngModel)]="sigin.email" name="email"
-                        #siginEmail="ngModel" />
-                    <mat-icon matSuffix>email</mat-icon>
-                </mat-form-field>
-                <div *ngIf="!siginEmail.valid && siginEmail.touched" class="error">
-                    Email is required!
-                </div>
-            </div>
+      </div>
 
-            <div style="position: relative;">
-                <mat-form-field appearance="outline">
-                    <mat-label>Enter Your Password</mat-label>
-                    <input matInput placeholder="Password" required [(ngModel)]="sigin.password" name="password"
-                        #siginPassword="ngModel" />
-                    <mat-icon matSuffix>lock</mat-icon>
-                </mat-form-field>
-                <div *ngIf="!siginPassword.valid && siginPassword.touched" class="error">
-                    Password is required!
-                </div>
-            </div>
+      <div style="position: relative;">
+        <mat-form-field appearance="outline">
+          <mat-label>Enter Your Password</mat-label>
+          <input
+            matInput
+            placeholder="Password"
+            required
+            [(ngModel)]="sigin.password"
+            name="password"
+            #siginPassword="ngModel"
+          />
+          <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+        <div
+          *ngIf="!siginPassword.valid && siginPassword.touched"
+          class="error"
+        >
+          Password is required!
+        </div>
+      </div>
 
-        
-            <div class="log-btn3">
-                <button mat-button routerLink="/forgot">Forgot Password</button>
-            </div>
-            <div class="log-btn">
-                <button mat-button type="submit" [disabled]="!newUserForm.valid">
-                    Login
-                </button>
-            </div>
-        </form>
-    </mat-card>
+      <div class="log-btn">
+        <button
+          mat-button
+          type="submit"
+          routerLink="/navbar"
+          [disabled]="!newUserForm.valid"
+        >
+          Login
+        </button>
+      </div>
+    </form>
+  </mat-card>
 </div>
